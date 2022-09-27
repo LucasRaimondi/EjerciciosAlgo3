@@ -1,0 +1,22 @@
+1.- ¿Qué crítica le harías al protocolo de #estaHerido y #noEstaHerido? (en vez de tener solo el mensaje #estaHerido y hacer “#estaHerido not” para saber la negación)
+
+Por temas de legibilidad creemos que es mas claro tener #estaHerido y #noEstaHerido, antes que que negar un caso verdadero, no genera confusion de ningun tipo
+pues con solo leer ya sabemos que le estamos enviando al objeto.
+
+2.- ¿Qué opinan de que para algunas funcionalidades tenemos 3 tests para el mismo comportamiento pero aplicando a cada uno de los combatientes (Arthas, Mankrik y Olgra)
+
+Eso se soluciona con una implementación prototipada, sabiendo que estos 3 combatientes se comportan de manera similar, y no repetimos codigo.
+
+3.- ¿Cómo modelaron el resultado de haber desarrollado un combate? ¿qué opciones consideraron y por qué se quedaron con la que entregaron y 
+por qué descartaron a las otras?
+
+Para comenzar se desarrollan todas las rondas, en cada ronda cada combatiente de cada bando atacara a uno de sus enemigos, 
+cada vez que se termina una ronda se verifica si algunos de los bandos fue completamente derrotado(todo el bando quedo con combatientes sin vida), 
+en caso de que pase esto, se le dice a ambos bandos que ya hay una ronda definitoria, 
+entonces se deja de hacer rondas, aunque la cantidad de rondas ingresadas sea mayor, 
+finalmente se consulta por el ganador, en caso de que sea indeterminado se va a devolver nil, 
+si hubo un ganador se devolvera el bando ganador(que ya sabe en que ronda gano).
+
+Esta implementacion nos parecio mejor debido a que nos permite conocer al ganador y sabe en que ronda gano,
+y pensando en futuros cambios, incluso podemos saber quienes son los sobrevivientes de ser necesario, 
+entonces esta implemenatcion queda abierta a ser extendida. 

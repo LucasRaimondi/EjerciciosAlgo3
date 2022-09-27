@@ -1,0 +1,15 @@
+1) Abstraccion de los test 01 y 02
+
+La entidad de la realidad que creamos seria un concepto de cronometro, para validar tiempos de ejecucion de metodos, esto en milisegundos.
+
+2)Como representar en Smalltalk
+
+Para representar entes de la realidad lo primero que se nos viene a la mente son las clases, a las que les podemos asignar responsabilidades atraves de mensajes, 
+cada una de las implementaciones de estos mensajes a su vez tambien son capaces de representar una de estas entidades, como por ejemplo el assert 
+que valida el tiempo de ejecucion para el test 01 y 02, que como mencionamos anteriormente representa una especie de cronometro.
+
+3)Teoria de Naur
+
+La VTC ve a un programador como el centro del desarrollo y el que tiene el conocimiento de la teoría, si desea refactorizar es el más 
+apropiado para hacerlo debido a su conocimiento, si de pronto llega otro programador a intentar refactorizar ese código se va a encontrar con muchas 
+cosas de las cuales puede no entender su funcionamiento.
