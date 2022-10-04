@@ -1,0 +1,22 @@
+1) Aporte de los mensajes de DD
+	Lo que esta pasando es que a la clase que recibimos como colaborador externo, le estamos enviando la clase receptora del mensaje, y de esta 
+	manera el colaborador externo sabra como trabajar en particular con esta.
+
+2)Lógica de instanciado
+	la logica de instanciado es mejor tenerla en un mensaje de clase al inicializar, ademas aca es donde estan ciertos valores que deben permanecer invariantes
+	y es mejor setear esas cosas aca mismo y no desde otros lados, ya que settear estas cosas por medio de otros metodos podria hacer que se le settee 
+	cualquier cosa y estariamos rompiendo encapsulamiento
+
+3) Nombres de las categorías de métodos
+	Nos fijamos las diferentes caracteristicas que tiene nuestro objeto y agrupamos todos los metodos que tengan que ver con esa caracteristica en 
+	particular, en el caso del ejercicio, nuestra clase Numero cuenta con la caracteristica de hacer calculos aritmeticos por ende decidimos 
+	agrupar todos estos metodos en una misma categoria, asi como tambien cuenta con la capacidad de mostrar diferentes 
+	errores y del mismo modo las agrupamos. 
+
+4) Subclass Responsibility
+	ponemos self subclassResponsibility, porque si nosotros crearamos otra subclase, esta debera implementar los mensajes que 
+	contengan esa implementacion en la super clase, mostrando incluso un error avisandonos que aun no la tenemos implementada
+
+5)No rompas
+	el principal problema seria que podamos modificar el estado de un objeto que deberia ser invariante o modificar su 
+	comportamiento accediendo a su implementacion interna
